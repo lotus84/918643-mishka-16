@@ -49,14 +49,20 @@
         <h2 class="product-main__title">Товар недели</h2>
         <h3 class="product-main__subtitle">Вязаные корзинки</h3>
         <p class="product-main__intro">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <dl class="product-main__features">
-          <dt class="product-main__option">Цвет:</dt>
-          <dd class="product-main__value">«Тиффани»/серый</dd>
-          <dt class="product-main__option">Диаметр:</dt>
-          <dd class="product-main__value">25 см</dd>
-          <dt class="product-main__option">Высота:</dt>
-          <dd class="product-main__value">15 см</dd>
-        </dl>
+        <table class="product-main__table features-table">
+          <tr class="features-table__row">
+            <td class="features-table__option">Цвет:</td>
+            <td class="features-table__value">«Тиффани»/серый</td>
+          </tr>
+          <tr class="features-table__row">
+            <td class="features-table__option">Диаметр:</td>
+            <td class="features-table__value">25 см</td>
+          </tr>
+          <tr class="features-table__row">
+            <td class="features-table__option">Высота:</td>
+            <td class="features-table__value">15 см</td>
+          </tr>
+        </table>
         <img class="product-main__image" src="http://placehold.it/260x315" width="260" height="315" alt="Три вязаные корзинки">
         <p class="product-main__price">Цена: 990 руб.</p>
         <a class="product-main__checkout button" href="checkout.html">Заказать</a>
@@ -92,16 +98,22 @@
       </section>
       <section class="company-contacts">
           <h2 class="company-contacts__title">Контакты</h2>
-          <dl class="company-contacts__list">
-            <dt class="company-contacts__option">e-mail:</dt>
-            <dd class="company-contacts__value"><a href="email:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
-            <dt class="company-contacts__option">адрес:</dt>
-            <dd class="company-contacts__value">
-              г. Санкт-Петербург,<br>
-              ул. Большая Конюшенная,<br>
-              д. 19/8, офис 101
-            </dd>
-          </dl>
+          <table class="company-contacts__table contacts-table">
+            <tr class="contacts-table__row">
+              <td class="contacts-table__option">e-mail:</td>
+              <td class="contacts-table__value">
+                <a class="contacts-table__link" href="email:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </td>
+            </tr>
+            <tr class="contacts-table__row">
+              <td class="contacts-table__option">адрес:</td>
+              <td class="contacts-table__value">
+                г. Санкт-Петербург,<br>
+                ул. Большая Конюшенная,<br>
+                д. 19/8, офис 101
+              </td>
+            </tr>
+          </table>
           <a class="company-contacts__map-link">
             <img class="company-contacts__map" src="http://placehold.it/320x457" width="320" height="457" alt="Офис магазина по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </a>
