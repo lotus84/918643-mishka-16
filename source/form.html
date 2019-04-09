@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - Каталог</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип интернет-магазина «Мишка»">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="#">Каталог товаров</a>
+            <a class="site-list__link" href="#">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
             <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
@@ -37,7 +38,7 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title">Вязание на заказ</h1>
+      <h1 class="page-main__title page-main__title--form">Вязание на заказ</h1>
       <p class="page-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="form-order" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form-order__section filter-type">
@@ -87,15 +88,15 @@
           <ul class="field-name__list">
             <li class="field-name__item">
               <label class="field-name__label" for="user-name">Имя:</label>
-              <input class="field-name__user-name" type="text" name="user-name" placeholder="Введите ваше имя*" id="user-name" required>
+              <input class="field-name__input field-name__user-name" type="text" name="user-name" placeholder="Введите ваше имя*" id="user-name" required>
             </li>
             <li class="field-name__item">
               <label class="field-name__label" for="user-lastname">Фамилия:</label>
-              <input class="field-name__user-lastname" type="text" name="user-lastname" placeholder="Укажите фамилию*" id="user-lastname" required>
+              <input class="field-name__input field-name__user-lastname" type="text" name="user-lastname" placeholder="Укажите фамилию*" id="user-lastname" required>
             </li>
             <li class="field-name__item">
               <label class="field-name__label" for="user-middlename">Отчество:</label>
-              <input class="field-name__user-middlename" type="text" name="user-middlename" placeholder="Отчество, если желаете" id="user-middlename">
+              <input class="field-name__input field-name__user-middlename" type="text" name="user-middlename" placeholder="Отчество, если желаете" id="user-middlename">
             </li>
           </ul>
         </fieldset>
