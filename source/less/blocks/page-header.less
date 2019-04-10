@@ -1,20 +1,24 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
 
   line-height: 24px;
 }
 
-.page-header__logo {
-  height: 80px;
-}
-
 @media (min-width: @tablet-width) {
   .page-header {
-    flex-direction: row;
+    width: auto;
+    margin: 0;
   }
 
-  .page-header__logo {
-    height: 90px;
+  .page-header__wrapper {
+    width: 670px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    width: 1050px;
   }
 }
