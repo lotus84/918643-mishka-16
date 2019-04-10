@@ -1,4 +1,7 @@
 .user-list {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
 
@@ -7,4 +10,10 @@
 
 .user-list__cart {
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .user-list {
+    flex-direction: row;
+  }
 }
