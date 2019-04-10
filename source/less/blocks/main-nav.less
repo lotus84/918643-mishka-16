@@ -1,10 +1,20 @@
 .main-nav {
+  display: flex;
+  flex-direction: column;
+
   min-height: 320px; /* временно для сетки */
-  outline: 1px solid tomato; /* временно для сетки */
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
+    flex-direction: row;
+
     min-height: 140px; /* временно для сетки */
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    min-height: 90px; /* временно для сетки */
   }
 }
