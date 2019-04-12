@@ -1,3 +1,61 @@
 .page-footer {
-  background-color: #ececec; /*Проверить цвет фона еще раз!*/
+  margin-top: 40px;
+  background-color: #f1f1f1;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__social {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.page-footer__copyright {
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    margin-top: 56px;
+  }
+
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 668px;
+    padding-top: 50px;
+    padding-bottom: 58px;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__social {
+    padding: 0;
+  }
+
+  .page-footer__copyright {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    margin-top: 104px;
+  }
+
+  .page-footer__wrapper {
+    width: 1050px;
+  }
 }
