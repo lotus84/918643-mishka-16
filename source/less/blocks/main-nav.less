@@ -1,34 +1,155 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-
-  width: 320px;
-
-  min-height: 320px; /* временно для сетки */
+  line-height: 24px;
 }
 
 .main-nav__logo {
-  height: 80px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  box-shadow: 0px 1px 0px 0px #ececec;
+}
+
+.main-nav__catalog {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 44px;
+  color: #000000;
+  box-shadow: 0px 1px 0px 0px #ececec;
+}
+
+.main-nav__ordering {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 44px;
+  color: #000000;
+  box-shadow: 0px 1px 0px 0px #ececec;
+}
+
+.main-nav__search {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 44px;
+  box-shadow: 0px 1px 0px 0px #ececec;
+}
+
+.main-nav__cart {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 44px;
+  color: #000000;
+  box-shadow: 0px 1px 0px 0px #ececec;
+}
+
+.main-nav__arrival {
+  display: none;
+}
+
+.main-nav__sale {
+  display: none;
+}
+
+.main-nav__delivery {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
     flex-direction: row;
-
-    width: 670px;
-
-    min-height: 140px; /* временно для сетки */
+    flex-wrap: wrap;
+    width: 668px;
   }
 
   .main-nav__logo {
-    height: 90px;
+    width: 320px;
+    box-shadow: none;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__catalog {
+    order: 1;
+    margin-right: 36px;
+    padding-left: 0;
+    font-size: 15px;
+    box-shadow: none;
+  }
+
+  .main-nav__ordering {
+    order: 1;
+    margin-right: auto;
+    padding-left: 0;
+    font-size: 15px;
+    box-shadow: none;
+  }
+
+  .main-nav__search {
+    padding-left: 0;
+    box-shadow: none;
+  }
+
+  .main-nav__cart {
+    margin-left: auto;
+    padding-left: 80px;
+    box-shadow: none;
+  }
+
+  .main-nav__delivery {
+    display: block;
+    order: 2;
+    width: 264px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 44px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #444444;
+    text-align: right;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
     width: 1050px;
+  }
 
-    min-height: 90px; /* временно для сетки */
+  .main-nav__logo {
+    width: 200px;
+    margin-right: 50px;
+  }
+
+  .main-nav__catalog {
+    order: -1;
+    margin-right: 70px;
+    font-size: 17px;
+  }
+
+  .main-nav__ordering {
+    order: -1;
+    margin-right: 74px;
+    font-size: 17px;
+  }
+
+  .main-nav__arrival {
+    display: block;
+    margin-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  .main-nav__sale {
+    display: block;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000000;
   }
 }
