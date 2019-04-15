@@ -1,23 +1,136 @@
+.catalog {
+  width: 260px;
+}
+
 .catalog__list {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+.catalog__item {
+  margin-bottom: 30px;
+}
+
+.catalog__item-image {
+  margin: 0;
+  padding: 0;
+  height: 195px;
+}
+
+.catalog__item-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 28px;
+  padding-right: 26px;
+  border: 1px solid #ececec;
+}
+
 .catalog__item-title {
+  margin: 0;
+  margin-bottom: 14px;
+  padding: 0;
+  font-size: 17px;
   line-height: 24px;
   color: #000000;
 }
 
 .catalog__item-info {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
   font-weight: 400;
   font-size: 13px;
   line-height: 30px;
   color: #444444;
 }
 
+.catalog__item-buy {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
 .catalog__item-price {
   font-size: 15px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    width: 668px;
+  }
+
+  .catalog__item {
+    display: flex;
+    margin-bottom: 54px;
+  }
+
+  .catalog__item-image {
+    width: 334px; /*потом убрать ширину*/
+    height: 334px;
+  }
+
+  .catalog__item-wrapper {
+    box-sizing: border-box;
+    width: 334px;
+    padding-right: 74px;
+  }
+
+  .catalog__item-title {
+    font-size: 20px;
+  }
+
+  .catalog__item-info {
+    margin-bottom: 200px;
+    font-size: 15px;
+  }
+
+  .catalog__item-price {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    width: 1050px;
+  }
+
+  .catalog__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    display: block;
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+
+  .catalog__item--last {
+    margin-right: auto;
+  }
+
+  .catalog__item-image {
+    width: 316px;
+    height: 462px;
+  }
+
+  .catalog__item-wrapper {
+    width: 316px;
+    padding-right: 50px;
+  }
+
+  .catalog__item-title {
+    font-size: 20px;
+  }
+
+  .catalog__item-info {
+    margin-bottom: 70px;
+  }
 }
