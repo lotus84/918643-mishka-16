@@ -1,3 +1,22 @@
 .page-header {
   line-height: 24px;
+  background-color: #ffffff;
+}
+
+.page-header__wrapper {
+  width: 260px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    width: 668px;
+    margin-bottom: -96px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    width: 1050px;
+  }
 }
