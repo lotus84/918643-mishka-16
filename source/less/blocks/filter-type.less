@@ -9,6 +9,11 @@
 }
 
 .filter-type__list {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
   margin: 0;
   padding: 0;
 
@@ -22,4 +27,18 @@
 .filter-type__label {
   .form-label;
   padding-left: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .filter-type {
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .filter-type__list {
+    width: 502px;
+    margin-block-end: 0;
+    margin-inline-end: 0;
+  }
 }
