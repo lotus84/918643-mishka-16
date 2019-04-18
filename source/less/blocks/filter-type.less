@@ -9,11 +9,6 @@
 }
 
 .filter-type__list {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
   margin: 0;
   padding: 0;
 
@@ -30,15 +25,36 @@
 }
 
 @media (min-width: @tablet-width) {
-  .filter-type {
+  .filter-type__wrap {
     display: flex;
     width: 668px;
     margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .filter-type__title {
+    box-sizing: border-box;
+    width: 168px;
+    margin-bottom: 0;
   }
 
   .filter-type__list {
-    width: 502px;
-    margin-block-end: 0;
-    margin-inline-end: 0;
+    width: 500px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-type__wrap {
+    width: 1050px;
+  }
+
+  .filter-type__title {
+    width: 174px;
+    padding-left: 62px;
+  }
+
+  .filter-type__list {
+    width: 700px;
   }
 }

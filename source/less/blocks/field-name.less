@@ -39,3 +39,55 @@
 .field-name__input::placeholder {
   .form-placeholder;
 }
+
+@media (min-width: @tablet-width) {
+  .field-name__wrap {
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .field-name__title {
+    box-sizing: border-box;
+    width: 168px;
+    margin-bottom: 0;
+    padding-top: 18px;
+    padding-bottom: 12px;
+  }
+
+  .field-name__list {
+    width: 500px;
+  }
+
+  .field-name__item {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+
+  .field-name__label {
+    padding-top: 18px;
+    padding-bottom: 12px;
+    padding-right: 26px;
+  }
+
+  .field-name__input {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-name__wrap {
+    width: 1050px;
+  }
+
+  .field-name__title {
+    width: 174px;
+    padding-left: 62px;
+  }
+
+  .field-name__list {
+    width: 700px;
+  }
+}

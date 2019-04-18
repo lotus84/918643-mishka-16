@@ -9,6 +9,7 @@
 }
 
 .form-order__note {
+  margin: 0;
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
@@ -20,5 +21,34 @@
   .form-order {
     width: auto;
     margin: 0;
+  }
+
+  .form-order__wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .form-order__button {
+    order: -1;
+    width: 230px;
+  }
+
+  .form-order__note {
+    margin-bottom: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-order__wrap {
+    box-sizing: border-box;
+    width: 1050px;
+    padding-left: 174px;
+    padding-right: 174px;
   }
 }

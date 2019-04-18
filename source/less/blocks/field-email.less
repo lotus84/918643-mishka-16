@@ -22,3 +22,46 @@
 .field-email__input::placeholder {
   .form-placeholder;
 }
+
+@media (min-width: @tablet-width) {
+  .field-email {
+    margin-bottom: 0;
+    background-color: #f1f1f1;
+  }
+
+  .field-email__wrap {
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 50px;
+  }
+
+  .field-email__title {
+    box-sizing: border-box;
+    width: 168px;
+    margin-bottom: 0;
+    padding-top: 18px;
+    padding-bottom: 12px;
+  }
+
+   .field-email__input {
+    width: 500px;
+    background-color: #f1f1f1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-email__wrap {
+    width: 1050px;
+  }
+
+  .field-email__title {
+    width: 174px;
+    padding-left: 62px;
+  }
+
+   .field-email__input {
+    width: 700px;
+  }
+}
