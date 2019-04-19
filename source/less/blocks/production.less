@@ -1,10 +1,157 @@
+.production {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: 260px;
+  border: 1px solid #ececec;
+}
+
+.production__title-wrap {
+  padding-top: 30px;
+  padding-bottom: 26px;
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
 .production__title {
+  margin: 0;
+  padding-left: 56px;
+
+  font-size: 17px;
   line-height: 24px;
 }
 
+.production__video {
+  width: auto;
+  margin-bottom: 30px;
+}
+
+.production__intro-wrap {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 34px;
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
 .production__intro {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
   color: #444444;
+}
+
+.production__button {
+  width: 192px;
+  line-height: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .production {
+    width: 668px;
+    border: none;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .production__title-wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 42px;
+    padding-right: 42px;
+
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+  .production__title {
+    margin: 0;
+    padding-left: 64px;
+
+    font-size: 20px;
+  }
+
+  .production__video {
+    order: -1;
+    height: 455px; /*временно*/
+    margin-bottom: 0;
+  }
+
+  .production__intro-wrap {
+    margin-bottom: 0;
+    padding-left: 42px;
+    padding-right: 42px;
+
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+  .production__intro {
+    margin-bottom: 40px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .production__button {
+    width: auto;
+    margin-bottom: 46px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    flex-wrap: wrap;
+    width: 1050px;
+    height: 455px; /*временно*/
+    border: none;
+    border-right: 1px solid #ececec;
+  }
+
+  .production__title-wrap {
+    box-sizing: border-box;
+    width: 368px;
+    padding-top: 44px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+    padding-right: 56px;
+
+    border-top: 1px solid #ececec;
+    border-left: none;
+    border-right: none;
+  }
+
+  .production__title {
+    padding-top: 54px;
+    padding-left: 0;
+  }
+
+  .production__video {
+    width: 682px;
+    height: 455px; /*временно*/
+  }
+
+  .production__intro-wrap {
+    box-sizing: border-box;
+    width: 368px;
+    padding-left: 80px;
+    padding-right: 56px;
+
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .production__intro {
+    margin-bottom: 44px;
+  }
+
+  .production__button {
+    margin-bottom: 54px;
+  }
 }

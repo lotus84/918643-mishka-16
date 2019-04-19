@@ -32,8 +32,13 @@
       </div>
     </header>
 
-    <main class="page-main--inner">
-      <h1 class="page-main__title">Каталог товаров</h1>
+
+    <main class="page-main page-main--inner">
+      <div class="page-main__intro page-main__intro--inner">
+        <div class="page-main__intro-wrap page-main__intro-wrap--inner">
+          <h1 class="page-main__title">Каталог товаров</h1>
+        </div>
+      </div>
       <div class="page-main__wrapper page-main__wrapper--inner">
         <section class="catalog">
           <h2 class="visually-hidden">Список товаров</h2>
@@ -98,14 +103,18 @@
           </ul>
         </section>
         <section class="production">
-          <h2 class="production__title">Процесс производства</h2>
+          <div class="production__title-wrap">
+            <h2 class="production__title">Процесс производства</h2>
+          </div>
           <video class="production__video" width="260" height="150" controls poster="img/video-mobile@1x.jpg">
             <source src="video.mp4" type="video/mp4">
             <source src="video.ogv" type="video/ogg">
             <source src="video.webm" type="video/webm">
           </video>
-          <p class="production__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="production__button button" href="checkout.html">Сделать заказ</a>
+          <div class="production__intro-wrap">
+            <p class="production__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="production__button button" href="checkout.html">Сделать заказ</a>
+          </div>
         </section>
       </div>
     </main>

@@ -1,7 +1,67 @@
+.field-phone {
+  margin-bottom: 42px;
+  border: none;
+}
+
 .field-phone__title {
   .form-legend;
+  margin-bottom: 16px;
+}
+
+.field-phone__input {
+  box-sizing: border-box;
+  width: 260px;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  padding-left: 1px;
+  padding-right: 36px;
+  border: none;
+  box-shadow: 0 2px 0 0 #000000;
 }
 
 .field-phone__input::placeholder {
   .form-placeholder;
+}
+
+@media (min-width: @tablet-width) {
+  .field-phone {
+    margin-bottom: 0;
+    background-color: #f1f1f1;
+  }
+
+  .field-phone__wrap {
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 12px;
+  }
+
+  .field-phone__title {
+    box-sizing: border-box;
+    width: 168px;
+    margin-bottom: 0;
+    padding-top: 18px;
+    padding-bottom: 12px;
+  }
+
+  .field-phone__input {
+    width: 500px;
+    background-color: #f1f1f1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-phone__wrap {
+    width: 1050px;
+  }
+
+  .field-phone__title {
+    width: 174px;
+    padding-left: 62px;
+  }
+
+  .field-phone__input {
+    width: 700px;
+  }
 }

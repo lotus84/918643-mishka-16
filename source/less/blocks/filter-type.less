@@ -1,5 +1,11 @@
+.filter-type {
+  margin-bottom: 18px;
+  border: none;
+}
+
 .filter-type__title {
   .form-legend;
+  margin-bottom: 16px;
 }
 
 .filter-type__list {
@@ -9,6 +15,46 @@
   list-style: none;
 }
 
+.filter-type__item {
+  margin-bottom: 24px;
+}
+
 .filter-type__label {
   .form-label;
+  padding-left: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .filter-type__wrap {
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .filter-type__title {
+    box-sizing: border-box;
+    width: 168px;
+    margin-bottom: 0;
+  }
+
+  .filter-type__list {
+    width: 500px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-type__wrap {
+    width: 1050px;
+  }
+
+  .filter-type__title {
+    width: 174px;
+    padding-left: 62px;
+  }
+
+  .filter-type__list {
+    width: 700px;
+  }
 }

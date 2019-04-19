@@ -1,5 +1,11 @@
+.filter-color {
+  margin-bottom: 18px;
+  border: none;
+}
+
 .filter-color__title {
   .form-legend;
+  margin-bottom: 16px;
 }
 
 .filter-color__list {
@@ -9,6 +15,59 @@
   list-style: none;
 }
 
+.filter-color__item {
+  margin-bottom: 24px;
+}
+
 .filter-color__label {
   .form-label;
+  padding-left: 82px;
+}
+
+@media (min-width: @tablet-width) {
+  .filter-color {
+    background-color: #f1f1f1;
+  }
+
+  .filter-color__wrap {
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  .filter-color__title {
+    box-sizing: border-box;
+    width: 168px;
+    margin-bottom: 0;
+  }
+
+  .filter-color__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 230px; /*временно*/
+  }
+
+  .filter-color__item {
+    margin-bottom: 56px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-color__wrap {
+    width: 1050px;
+  }
+
+  .filter-color__title {
+    width: 174px;
+    padding-left: 62px;
+  }
+
+  .filter-color__list {
+    width: 730px;
+    height: 160px; /*временно*/
+  }
 }
