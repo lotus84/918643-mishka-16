@@ -2,12 +2,20 @@
   display: flex;
   flex-direction: column;
   line-height: 24px;
+  outline: 1px solid tomato; /*delete*/
 }
 
 .main-nav__logo {
   padding-top: 22px;
   padding-bottom: 22px;
+  text-align: center;
   box-shadow: 0 1px 0 0 #ececec;
+  outline: 1px solid tomato; /*delete*/
+}
+
+.main-nav__logo-image {
+  width: 86px;
+  height: 35px;
 }
 
 .main-nav__catalog {
@@ -65,6 +73,13 @@
     box-shadow: none;
   }
 
+  .main-nav__logo-image {
+    display: block;
+    width: 112px;
+    height: auto;
+    outline: 5px solid blue;/*delete*/
+  }
+
   .main-nav__toggle {
     display: none;
   }
@@ -119,6 +134,12 @@
   .main-nav__logo {
     width: 200px;
     margin-right: 50px;
+  }
+
+  .main-nav__logo-image {
+    width: 149px;
+    height: auto;
+    margin: 0 auto;
   }
 
   .main-nav__catalog {
