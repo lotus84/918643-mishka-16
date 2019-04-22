@@ -1,16 +1,15 @@
 .main-nav {
+  position: relative;
   display: flex;
   flex-direction: column;
   line-height: 24px;
-  outline: 1px solid tomato; /*delete*/
 }
 
 .main-nav__logo {
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 20px;
+  padding-bottom: 19px;
   text-align: center;
   box-shadow: 0 1px 0 0 #ececec;
-  outline: 1px solid tomato; /*delete*/
 }
 
 .main-nav__logo-image {
@@ -18,35 +17,134 @@
   height: 35px;
 }
 
-.main-nav__catalog {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 44px;
-  color: #000000;
+.main-nav__toggle {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 2;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ffffff;
+
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__wrap--closed ~ .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 0px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav__wrap--opened ~ .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: -4px;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__wrap--nojs ~ .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__container {
   box-shadow: 0 1px 0 0 #ececec;
+}
+
+.main-nav__catalog {
+  display: block;
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  padding-left: 46px;
+  padding-right: 10px;
+  color: #000000;
 }
 
 .main-nav__ordering {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 44px;
+  display: block;
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  padding-left: 46px;
+  padding-right: 10px;
   color: #000000;
-  box-shadow: 0 1px 0 0 #ececec;
 }
 
 .main-nav__search {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 44px;
-  box-shadow: 0 1px 0 0 #ececec;
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  padding-left: 46px;
+  padding-right: 10px;
 }
 
 .main-nav__cart {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 44px;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  padding-left: 46px;
+  padding-right: 10px;
   color: #000000;
-  box-shadow: 0 1px 0 0 #ececec;
+}
+
+.main-nav__cart::before {
+  content: "";
+
+  position:  absolute;
+  top: 32px;
+  left: 0;
+
+  width: 21px;
+  height: 18px;
+
+  background-image: url("../../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.2;
 }
 
 .main-nav__arrival {
@@ -59,6 +157,12 @@
 
 .main-nav__delivery {
   display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav__wrap--closed .main-nav__container {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -77,15 +181,22 @@
     display: block;
     width: 112px;
     height: auto;
-    outline: 5px solid blue;/*delete*/
   }
 
   .main-nav__toggle {
     display: none;
   }
 
-  .main-nav__catalog {
+  .main-nav__wrap {
+    flex-direction: row;
+  }
+
+  .main-nav__wrap--first {
     order: 1;
+  }
+
+  .main-nav__catalog {
+    /*order: 1;*/
     margin-right: 36px;
     padding-left: 0;
     font-size: 15px;
@@ -93,7 +204,7 @@
   }
 
   .main-nav__ordering {
-    order: 1;
+    /*order: 1;*/
     margin-right: auto;
     padding-left: 0;
     font-size: 15px;
@@ -132,6 +243,7 @@
   }
 
   .main-nav__logo {
+    order: 0;
     width: 200px;
     margin-right: 50px;
   }
@@ -142,14 +254,20 @@
     margin: 0 auto;
   }
 
-  .main-nav__catalog {
+  .main-nav__wrap--first {
     order: -1;
+  }
+
+  .main-nav__wrap--second {
+    order: 0;
+  }
+
+  .main-nav__catalog {
     margin-right: 70px;
     font-size: 17px;
   }
 
   .main-nav__ordering {
-    order: -1;
     margin-right: 74px;
     font-size: 17px;
   }

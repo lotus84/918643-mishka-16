@@ -15,16 +15,30 @@
           <a class="main-nav__logo" href="#">
             <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»">
           </a>
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <a class="main-nav__catalog" href="catalog.html">Каталог товаров</a>
-          <a class="main-nav__ordering" href="form.html">Вязание на заказ</a>
-          <form class="main-nav__search header-search" action="https://echo.htmlacademy.ru" method="get">
-            <input class="header-search__item" id="search-field" type="search" name="search" placeholder="Поиск по сайту">
-            <label for="search-field">
-              <span class="visually-hidden">Поиск</span>
-            </label>
-          </form>
-          <a class="main-nav__cart" href="cart.html">Корзина: пока пуста</a>
+          <div class="main-nav__wrap main-nav__wrap--first main-nav__wrap--opened main-nav__wrap--nojs">
+            <div class="main-nav__container">
+              <a class="main-nav__catalog" href="catalog.html">Каталог товаров</a>
+            </div>
+            <div class="main-nav__container">
+              <a class="main-nav__ordering" href="form.html">Вязание на заказ</a>
+            </div>
+          </div>
+          <div class="main-nav__wrap main-nav__wrap--second main-nav__wrap--opened main-nav__wrap--nojs">
+            <div class="main-nav__container">
+              <form class="main-nav__search header-search" action="https://echo.htmlacademy.ru" method="get">
+                <input class="header-search__item" id="search-field" type="search" name="search" placeholder="Поиск по сайту">
+                <label for="search-field">
+                  <span class="visually-hidden">Поиск</span>
+                </label>
+              </form>
+            </div>
+            <div class="main-nav__container">
+              <a class="main-nav__cart" href="cart.html">Корзина: пока пуста</a>
+            </div>
+          </div>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <a class="main-nav__arrival" href="newarrival.html">Новые поступления</a>
           <a class="main-nav__sale" href="sale.html">Распродажа</a>
           <a class="main-nav__delivery" href="delivery.html">Бесплатная доставка по России</a>
@@ -191,5 +205,28 @@
       </form>
     </section>
 
+    <!-- скрипты временно здесь -->
+
+    <script>
+      var navMain = document.querySelectorAll(".main-nav__wrap");
+      var navToggle = document.querySelector(".main-nav__toggle");
+
+      console.log(navMain);
+      for (var i = 0; i < navMain.length; i++) {
+        navMain[i].classList.remove("main-nav__wrap--nojs");
+      }
+
+      navToggle.addEventListener("click", function() {
+        for (var i = 0; i < navMain.length; i++) {
+          if (navMain[i].classList.contains("main-nav__wrap--closed")) {
+            navMain[i].classList.remove("main-nav__wrap--closed");
+            navMain[i].classList.add("main-nav__wrap--opened");
+          } else {
+            navMain[i].classList.add("main-nav__wrap--closed");
+            navMain[i].classList.remove("main-nav__wrap--opened");
+          }
+        };
+      });
+    </script>
   </body>
 </html>
