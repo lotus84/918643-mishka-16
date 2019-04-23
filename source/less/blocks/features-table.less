@@ -4,3 +4,33 @@
   line-height: 20px;
   color: #444444;
 }
+
+.features-table__option {
+  position: relative;
+  width: 98px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.features-table__option::after {
+  content: "";
+
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+
+  width: 260px;
+  height: 1px;
+
+  background-color: #ececec;
+}
+
+@media (min-width: @tablet-width) {
+  .features-table {
+    width: 292px;
+  }
+
+  .features-table__option::after {
+    width: 292px;
+  }
+}
