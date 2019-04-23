@@ -93,8 +93,25 @@
   }
 
   .page-main__wrapper {
+    position: relative;
     width: 668px;
     margin: 0 auto;
+  }
+
+  .page-main__wrapper::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: 10;
+
+    width: 770px;
+    height: 24px;
+
+    background-image: url("../../img/bg-zigzag-fill.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 
   .page-main__wrapper--tablet {
