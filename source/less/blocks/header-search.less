@@ -13,19 +13,13 @@
   color: #000000;
 }
 
-.header-search__label::before {
-  content: "";
-
+.header-search__label {
   position: absolute;
   top: 32px;
   left: 0;
+}
 
-  width: 18px;
-  height: 18px;
-
-  background-image: url("../../img/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.header-search__label svg {
   opacity: 0.2;
 }
 
@@ -42,8 +36,8 @@
     clip: rect(1px,1px,1px,1px);
   }
 
-  .header-search__label::before {
-    left: 20px;
+  .header-search__label {
+    left: 28px;
   }
 
   .header-search__label:hover + .header-search__item {
@@ -51,11 +45,5 @@
     height: auto;
     overflow: visible;
     clip: auto;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .header-search__label::before {
-    left: 32px;
   }
 }

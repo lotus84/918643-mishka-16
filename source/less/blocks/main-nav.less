@@ -119,32 +119,23 @@
 }
 
 .main-nav__cart {
-  position: relative;
-  display: block;
+  display: flex;
   box-sizing: border-box;
   width: 260px;
   margin: 0 auto;
-  padding-top: 31px;
-  padding-bottom: 30px;
-  padding-left: 46px;
-  padding-right: 10px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   color: #000000;
 }
 
-.main-nav__cart::before {
-  content: "";
-
-  position:  absolute;
-  top: 32px;
-  left: 0;
-
-  width: 21px;
-  height: 18px;
-
-  background-image: url("../../img/icon-cart.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.main-nav__cart svg {
+  margin-top: 4px;
+  margin-right: 25px;
   opacity: 0.2;
+}
+
+.main-nav__cart p {
+  margin: 0;
 }
 
 .main-nav__arrival {
@@ -185,6 +176,15 @@
     height: 46px;
   }
 
+  .main-nav__logo:hover .main-nav__logo-image,
+  .main-nav__logo:focus .main-nav__logo-image {
+    opacity: 0.6;
+  }
+
+  .main-nav__logo:active .main-nav__logo-image {
+    opacity: 0.3;
+  }
+
   .main-nav__toggle {
     display: none;
   }
@@ -221,20 +221,60 @@
   .main-nav__search {
     width: 80px;
     margin: 0;
+    padding-top: 43px;
+    padding-bottom: 42px;
     padding-left: 10px;
   }
 
   .main-nav__cart {
     width: 268px;
     margin: 0;
-    padding-left: 80px;
-    padding-right: 0;
-    text-align: right;
+    padding-top: 31px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
     border-left: 1px solid #ececec;
   }
 
-  .main-nav__cart::before {
-    left: 20px;
+  .main-nav__cart svg {
+    margin-left: auto;
+    margin-right: 31px;
+  }
+
+  .main-nav__cart p {
+    margin-left: 0;
+  }
+
+  .main-nav__cart:hover svg,
+  .main-nav__cart:focus svg {
+    opacity: 1;
+  }
+
+  .main-nav__cart:hover path,
+  .main-nav__cart:focus path {
+    fill: #63d1bb;
+  }
+
+  .main-nav__cart:active path {
+    fill: rgba(99, 209, 187, 0.3);
+  }
+
+  .main-nav__cart:hover p,
+  .main-nav__cart:focus p {
+    opacity: 0.6;
+  }
+
+  .main-nav__cart:active p {
+    opacity: 0.3;
+  }
+
+  .main-nav__link:hover,
+  .main-nav__link:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .main-nav__link:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 
   .main-nav__delivery {
@@ -299,8 +339,8 @@
 
   .main-nav__search {
     width: 82px;
-    padding-top: 44px;
-    padding-bottom: 44px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .main-nav__cart {
