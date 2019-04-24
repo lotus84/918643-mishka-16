@@ -227,18 +227,20 @@
       <h2 class="modal-item__title">Добавить в корзину</h2>
       <p class="modal-item__text">Выберите размер:</p>
       <form class="modal-item__form form-size" action="https://echo.htmlacademy.ru" method="post">
-        <label class="form-size__toggle">
-          S
-          <input class="visually-hidden" type="radio" name="size" value="S" checked>
-        </label>
-        <label class="form-size__toggle">
-          M
-          <input class="visually-hidden" type="radio" name="size" value="M">
-        </label>
-        <label class="form-size__toggle">
-          L
-          <input class="visually-hidden" type="radio" name="size" value="L">
-        </label>
+        <div class="form-size__wrap">
+          <p class="form-size__item">
+            <input class="visually-hidden form-size__input" id="size-1" type="radio" name="size" value="S" checked>
+            <label class="form-size__toggle" for="size-1">S</label>
+          </p>
+          <p class="form-size__item">
+            <input class="visually-hidden form-size__input" id="size-2" type="radio" name="size" value="M">
+            <label class="form-size__toggle" for="size-2">M</label>
+          </p>
+          <p class="form-size__item">
+            <input class="visually-hidden form-size__input" id="size-3" type="radio" name="size" value="L">
+            <label class="form-size__toggle" for="size-3">L</label>
+          </p>
+        </div>
         <button class="modal-item__button" type="submit">Добавить</button>
       </form>
     </section>
@@ -264,6 +266,14 @@
             navMain[i].classList.remove("main-nav__wrap--opened");
           }
         };
+      });
+
+      var itemBuy = document.querySelector(".product-main__checkout");
+      var itemPopup = document.querySelector(".modal-item");
+
+      itemBuy.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        itemPopup.classList.add("modal-show");
       });
     </script>
   </body>
