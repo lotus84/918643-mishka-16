@@ -1,4 +1,42 @@
+.copyright {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+}
+
 .copyright__text {
+  padding-top: 6px;
   font-size: 18px;
   line-height: 18px;
+  color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 180px;
+    padding: 0;
+  }
+
+  .copyright__link:hover path,
+  .copyright__link:focus path {
+    fill: #46c1ae;
+  }
+
+  .copyright__link:active path {
+    fill: rgba(70, 193, 174, 0.3);
+  }
+
+  .copyright__link:active .copyright__text {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    width: 184px;
+  }
 }
