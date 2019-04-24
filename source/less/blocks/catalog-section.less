@@ -79,6 +79,14 @@
     margin: 0 auto;
   }
 
+  .catalog-section__item--left {
+    background-color: transparent;
+  }
+
+  .catalog-section__item--right {
+    background-color: transparent;
+  }
+
   .catalog-section__link {
     width: 334px;
     margin: 0;
@@ -86,6 +94,15 @@
     padding-bottom: 42px;
     padding-left: 36px;
     padding-right: 184px;
+
+  }
+
+  .catalog-section__link--decor {
+    background-color: #63d1bb;
+  }
+
+  .catalog-section__link--toys {
+    background-color: #56c3b2;
   }
 
   .catalog-section__link--decor::before {
@@ -96,6 +113,44 @@
   .catalog-section__link--toys::before {
     top: 30px;
     left: 240px;
+  }
+
+  .catalog-section__link--decor:hover,
+  .catalog-section__link--decor:focus {
+    background-color: #59d5bc;
+  }
+
+  .catalog-section__link--decor:hover::before,
+  .catalog-section__link--decor:focus::before {
+    opacity: 0.7;
+  }
+
+  .catalog-section__link--decor:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #59d5bc;
+  }
+
+  .catalog-section__link--decor:active::before {
+    opacity: 0.3;
+  }
+
+  .catalog-section__link--toys:hover,
+  .catalog-section__link--toys:focus {
+    background-color: #46c1ae;
+  }
+
+  .catalog-section__link--toys:hover::before,
+  .catalog-section__link--toys:focus::before {
+    opacity: 0.7;
+  }
+
+  .catalog-section__link--toys:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #46c1ae;
+  }
+
+  .catalog-section__link--toys:active::before {
+    opacity: 0.3;
   }
 }
 
