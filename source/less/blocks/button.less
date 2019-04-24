@@ -11,4 +11,18 @@
   text-transform: uppercase;
   border: 2px solid #444444;
   background-color: #ffffff;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .button:hover,
+  .button:focus {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  .button:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #444444;
+  }
 }
