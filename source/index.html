@@ -245,36 +245,6 @@
       </form>
     </section>
 
-    <!-- скрипты временно здесь -->
-
-    <script>
-      var navMain = document.querySelectorAll(".main-nav__wrap");
-      var navToggle = document.querySelector(".main-nav__toggle");
-
-      console.log(navMain);
-      for (var i = 0; i < navMain.length; i++) {
-        navMain[i].classList.remove("main-nav__wrap--nojs");
-      }
-
-      navToggle.addEventListener("click", function() {
-        for (var i = 0; i < navMain.length; i++) {
-          if (navMain[i].classList.contains("main-nav__wrap--closed")) {
-            navMain[i].classList.remove("main-nav__wrap--closed");
-            navMain[i].classList.add("main-nav__wrap--opened");
-          } else {
-            navMain[i].classList.add("main-nav__wrap--closed");
-            navMain[i].classList.remove("main-nav__wrap--opened");
-          }
-        };
-      });
-
-      var itemBuy = document.querySelector(".product-main__checkout");
-      var itemPopup = document.querySelector(".modal-item");
-
-      itemBuy.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        itemPopup.classList.add("modal-show");
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
