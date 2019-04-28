@@ -1,3 +1,7 @@
+.header-search {
+  position: relative;
+}
+
 .header-search__item {
   border: none;
 }
@@ -9,8 +13,38 @@
   color: #000000;
 }
 
+.header-search__label {
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+
+.header-search__label svg {
+  opacity: 0.2;
+}
+
 @media (min-width: @tablet-width) {
   .header-search__item {
-    display: none;
+    position: absolute;
+    top: 64px;
+    left: -150px;
+    z-index: 10;
+
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  .header-search__label {
+    top: 36px;
+    left: 34px;
+  }
+
+  .header-search__label:hover + .header-search__item {
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
   }
 }

@@ -1,5 +1,40 @@
+.form-size {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-size__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form-size__item {
+  margin: 0;
+}
+
 .form-size__toggle {
+  display: block;
+  box-sizing: border-box;
+  width: 82px;
+  padding: 15px 10px;
   line-height: 17px;
   text-align: center;
   color: #444444;
+  background-color: #ffffff;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+}
+
+.form-size__input:checked + .form-size__toggle {
+  border: 2px solid #62d1ba;
+}
+
+.form-size__toggle:hover {
+  border: 2px solid rgba(68, 68, 68, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .form-size__toggle {
+    width: 112px;
+  }
 }
