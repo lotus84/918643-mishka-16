@@ -1,11 +1,23 @@
 .field-email {
-  margin-bottom: 42px;
+  margin-bottom: 34px;
   border: none;
 }
 
 .field-email__title {
-  .form-legend;
-  margin-bottom: 16px;
+  .form-title;
+  margin-bottom: 5px;
+}
+
+.field-email__title::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+  width: 198px;
+  height: 1px;
+  background-color: #62d1ba;
 }
 
 .field-email__input {
@@ -13,10 +25,13 @@
   width: 260px;
   padding-top: 17px;
   padding-bottom: 16px;
-  padding-left: 1px;
-  padding-right: 38px;
+  padding-left: 0;
+  padding-right: 40px;
   border: none;
   box-shadow: 0 2px 0 0 #000000;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 224px center;
 }
 
 .field-email__input::placeholder {
@@ -33,7 +48,7 @@
     display: flex;
     width: 668px;
     margin: 0 auto;
-    padding-top: 12px;
+    padding-top: 25px;
     padding-bottom: 50px;
   }
 
@@ -43,11 +58,29 @@
     margin-bottom: 0;
     padding-top: 18px;
     padding-bottom: 12px;
+    padding-left: 2px;
+  }
+
+  .field-email__title::after {
+    display: none;
   }
 
   .field-email__input {
     width: 500px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    padding-left: 17px;
     background-color: #f1f1f1;
+    background-position: 447px center;
+  }
+
+  .field-email__input:hover,
+  .field-email__input:focus {
+    box-shadow: 0 2px 0 0 #62d1ba;
+  }
+
+  .field-email__input:active {
+    box-shadow: 0 2px 0 0 #62d1ba;
   }
 }
 
@@ -63,5 +96,6 @@
 
   .field-email__input {
     width: 700px;
+    background-position: 664px center;
   }
 }

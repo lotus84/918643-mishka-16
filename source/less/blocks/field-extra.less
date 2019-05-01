@@ -1,20 +1,32 @@
 .field-extra {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   border: none;
 }
 
 .field-extra__title {
-  .form-legend;
-  margin-bottom: 16px;
+  .form-title;
+  margin-bottom: 25px;
+}
+
+.field-extra__title::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+  width: 198px;
+  height: 1px;
+  background-color: #62d1ba;
 }
 
 .field-extra__textarea {
   box-sizing: border-box;
   width: 260px;
   height: 142px;
-  padding-top: 17px;
+  padding-top: 14px;
   padding-bottom: 17px;
-  padding-left: 17px;
+  padding-left: 14px;
   padding-right: 17px;
   border: 2px solid #444444;
 }
@@ -25,30 +37,48 @@
 
 @media (min-width: @tablet-width) {
   .field-extra {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 
   .field-extra__wrap {
     display: flex;
     width: 668px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 52px;
   }
 
   .field-extra__title {
     box-sizing: border-box;
     width: 168px;
     margin-bottom: 0;
-    padding-top: 18px;
+    padding-top: 17px;
     padding-bottom: 12px;
+    padding-left: 2px;
+  }
+
+  .field-extra__title::after {
+    display: none;
   }
 
   .field-extra__textarea {
     width: 500px;
   }
+
+  .field-extra__textarea:hover,
+  .field-extra__textarea:focus {
+    border: 2px solid #62d1ba;
+  }
+
+  .field-extra__textarea:active {
+    border: 2px solid #62d1ba;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .field-extra {
+    margin-bottom: 48px;
+  }
+
   .field-extra__wrap {
     width: 1050px;
   }

@@ -1,11 +1,23 @@
 .filter-type {
-  margin-bottom: 18px;
+  margin-bottom: 44px;
   border: none;
 }
 
 .filter-type__title {
-  .form-legend;
-  margin-bottom: 16px;
+  .form-title;
+  margin-bottom: 34px;
+}
+
+.filter-type__title::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+  width: 198px;
+  height: 1px;
+  background-color: #62d1ba;
 }
 
 .filter-type__list {
@@ -19,28 +31,102 @@
   margin-bottom: 24px;
 }
 
+.filter-type__item--last {
+  margin-bottom: 0;
+}
+
 .filter-type__label {
   .form-label;
-  padding-left: 40px;
+  position: relative;
+  padding-left: 62px;
+}
+
+.filter-type__label::before {
+  content: "";
+
+  position: absolute;
+  top: -9px;
+  left: 0;
+
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border: 2px solid #444444;
+  border-radius: 50%;
+}
+
+.filter-type__radio:checked + .filter-type__label::after {
+  content: "";
+
+  position: absolute;
+  top: 3px;
+  left: 12px;
+
+  width: 16px;
+  height: 16px;
+  background-color: #62d1ba;
+  border-radius: 50%;
 }
 
 @media (min-width: @tablet-width) {
+  .filter-type {
+    margin-bottom: 11px;
+  }
+
   .filter-type__wrap {
     display: flex;
     width: 668px;
     margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 48px;
   }
 
   .filter-type__title {
     box-sizing: border-box;
     width: 168px;
     margin-bottom: 0;
+    padding-top: 2px;
+    padding-left: 2px;
+  }
+
+  .filter-type__title::after {
+    display: none;
   }
 
   .filter-type__list {
     width: 500px;
+  }
+
+  .filter-type__item {
+    margin-bottom: 58px;
+  }
+
+  .filter-type__label {
+    padding-left: 81px;
+    font-size: 18px;
+  }
+
+  .filter-type__label::before {
+  top: -15px;
+
+  width: 48px;
+  height: 48px;
+}
+
+  .filter-type__radio:checked + .filter-type__label::after {
+  top: 0;
+  left: 14px;
+
+  width: 22px;
+  height: 22px;
+}
+
+  .filter-type__radio:hover + .filter-type__label::before,
+  .filter-type__radio:focus + .filter-type__label::before {
+    border: 2px solid #62d1ba;
+  }
+
+  .filter-type__radio:active + .filter-type__label::before {
+    border: 2px solid rgba(68, 68, 68, 0.3);
   }
 }
 
@@ -51,7 +137,7 @@
 
   .filter-type__title {
     width: 174px;
-    padding-left: 62px;
+    padding-left: 65px;
   }
 
   .filter-type__list {
