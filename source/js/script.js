@@ -4,7 +4,7 @@ var itemWeekBuy = document.querySelector(".product-main__checkout");
 var itemPopup = document.querySelector(".modal-item");
 var itemBuy = document.querySelectorAll(".catalog__button-buy");
 
-console.log(itemBuy);
+console.log(itemPopup);
 
 for (var i = 0; i < navMain.length; i++) {
   navMain[i].classList.remove("main-nav__wrap--nojs");
@@ -25,21 +25,20 @@ navToggle.addEventListener("click", function() {
 for (var j = 0; j < itemBuy.length; j++) {
   itemBuy[j].addEventListener("click", function (evt) {
     evt.preventDefault();
-    itemPopup.classList.add("modal-show");
+    itemPopup.classList.add("modal__show");
   });
 };
-
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (itemPopup.classList.contains("modal-show")) {
-      itemPopup.classList.remove("modal-show");
+    if (itemPopup.classList.contains("modal__show")) {
+      itemPopup.classList.remove("modal__show");
     }
   }
 });
 
 itemWeekBuy.addEventListener("click", function (evt) {
   evt.preventDefault();
-  itemPopup.classList.add("modal-show");
+  itemPopup.classList.add("modal__show");
 });

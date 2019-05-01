@@ -1,4 +1,7 @@
-.form-legend() {
+.form-title() {
+  position: relative;
+  margin: 0;
+  font-weight: 700;
   font-size: 16px;
   line-height: 16px;
   color: #63d1bb;
@@ -6,8 +9,10 @@
 }
 
 .form-label() {
+  display: block;
   font-size: 17px;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .form-placeholder() {
@@ -18,7 +23,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-legend() {
+  .form-title() {
     font-size: 17px;
     line-height: 17px;
   }

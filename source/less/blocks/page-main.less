@@ -3,7 +3,7 @@
 }
 
 .page-main__intro {
-  background-image: url("../../img/hero-mobile@1x.jpg");
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-position: 50% -20px;
   background-repeat: no-repeat;
   background-color: #f9f9f9;
@@ -13,6 +13,10 @@
   margin-bottom: 30px;
   background-image: none;
   background-color: #f1f1f1;
+}
+
+.page-main__intro--inner-form {
+  margin-bottom: 23px;
 }
 
 .page-main__intro-wrap {
@@ -37,7 +41,7 @@
 .page-main__desc {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .page-main__desc-text {
@@ -63,7 +67,7 @@
   width: 100%;
   height: 23px;
 
-  background-image: url("../../img/bg-zigzag-line.svg");
+  background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -76,7 +80,7 @@
 @media (min-width: @tablet-width) {
   .page-main__intro {
     margin-bottom: 44px;
-    background-image: url("../../img/hero-tablet@1x.jpg");
+    background-image: url("../img/hero-tablet@1x.jpg");
     background-position: 50% 0%;
     box-shadow: 0 -1px 0 0 #ececec;
   }
@@ -91,7 +95,7 @@
     width: 100%;
     height: 24px;
 
-    background-image: url("../../img/bg-zigzag-fill.svg");
+    background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -99,6 +103,14 @@
   .page-main__intro--inner {
     margin-bottom: 88px;
     background-image: none;
+  }
+
+  .page-main__intro--inner.page-main__intro--zigzag::after {
+    top: 290px;
+  }
+
+  .page-main__intro--inner-form {
+    margin-bottom: 80px;
   }
 
   .page-main__intro-wrap {
@@ -120,7 +132,7 @@
 
   .page-main__desc {
     width: 668px;
-    margin-bottom: 60px;
+    margin-bottom: 24px;
   }
 
   .page-main__desc-text {
@@ -146,7 +158,7 @@
 @media (min-width: @desktop-width) {
   .page-main__intro {
     margin-bottom: 122px;
-    background-image: url("../../img/hero-desktop@1x.jpg");
+    background-image: url("../img/hero-desktop@1x.jpg");
   }
 
   .page-main__intro--zigzag::after {
@@ -154,8 +166,12 @@
   }
 
   .page-main__intro--inner {
-    margin-bottom: 160px;
+    margin-bottom: 122px;
     background-image: none;
+  }
+
+  .page-main__intro--inner.page-main__intro--zigzag::after {
+    top: 327px;
   }
 
   .page-main__intro-wrap {
@@ -164,7 +180,7 @@
   }
 
   .page-main__intro-wrap--inner {
-    min-height: 130px;
+    min-height: 160px;
     padding-top: 95px;
   }
 

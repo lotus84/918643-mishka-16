@@ -1,11 +1,23 @@
 .filter-color {
-  margin-bottom: 18px;
+  margin-bottom: 41px;
   border: none;
 }
 
 .filter-color__title {
-  .form-legend;
-  margin-bottom: 16px;
+  .form-title;
+  margin-bottom: 37px;
+}
+
+.filter-color__title::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+  width: 198px;
+  height: 1px;
+  background-color: #62d1ba;
 }
 
 .filter-color__list {
@@ -16,16 +28,49 @@
 }
 
 .filter-color__item {
-  margin-bottom: 24px;
+  margin-bottom: 43px;
+}
+
+.filter-color__item--last {
+  margin-bottom: 0;
 }
 
 .filter-color__label {
   .form-label;
-  padding-left: 82px;
+  position: relative;
+  padding-left: 64px;
+}
+
+.filter-color__label::before {
+  content: "";
+
+  position: absolute;
+  top: -13px;
+  left: 0;
+
+  width: 36px;
+  height: 36px;
+  border: 2px solid #444444;
+  background-color: #ffffff;
+}
+
+.filter-color__checkbox:checked + .filter-color__label::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 9px;
+
+  width: 32px;
+  height: 22px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 @media (min-width: @tablet-width) {
   .filter-color {
+    margin-bottom: 0;
     background-color: #f1f1f1;
   }
 
@@ -33,26 +78,62 @@
     display: flex;
     width: 668px;
     margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 66px;
+    padding-bottom: 8px;
   }
 
   .filter-color__title {
     box-sizing: border-box;
     width: 168px;
     margin-bottom: 0;
+    padding-top: 1px;
+    padding-left: 2px;
+  }
+
+  .filter-color__title::after {
+    display: none;
   }
 
   .filter-color__list {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    width: 500px;
-    height: 230px; /*временно*/
+    width: 450px;
   }
 
   .filter-color__item {
-    margin-bottom: 56px;
+    box-sizing: border-box;
+    width: 184px;
+    margin-bottom: 58px;
+    margin-right: 78px;
+  }
+
+  .filter-color__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .filter-color__label {
+    padding-left: 81px;
+  }
+
+  .filter-color__label::before {
+    top: -16px;
+    width: 48px;
+    height: 48px;
+    background-color: #f1f1f1;
+  }
+
+  .filter-color__checkbox:checked + .filter-color__label::after {
+    top: 6px;
+    left: 14px;
+  }
+
+  .filter-color__checkbox:hover + .filter-color__label::before,
+  .filter-color__checkbox:focus + .filter-color__label::before {
+    border: 2px solid #62d1ba;
+  }
+
+  .filter-color__checkbox:active + .filter-color__label::before {
+    border: 2px solid rgba(68, 68, 68, 0.3);
   }
 }
 
@@ -68,6 +149,24 @@
 
   .filter-color__list {
     width: 730px;
-    height: 160px; /*временно*/
+  }
+
+  .filter-color__item {
+    width: 185px;
+    margin-bottom: 58px;
+    margin-right: 78px;
+  }
+
+  .filter-color__item:nth-child(2n) {
+    margin-right: 78px;
+  }
+
+  .filter-color__item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .filter-color__label::before {
+    top: -17px;
+    left: 2px;
   }
 }

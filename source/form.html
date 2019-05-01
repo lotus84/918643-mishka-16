@@ -55,7 +55,7 @@
     </header>
 
     <main class="page-main page-main--inner">
-      <div class="page-main__intro page-main__intro--inner">
+      <div class="page-main__intro page-main__intro--inner page-main__intro--inner-form page-main__intro--zigzag">
         <div class="page-main__intro-wrap page-main__intro-wrap--inner">
           <h1 class="page-main__title">Вязание на заказ</h1>
         </div>
@@ -66,13 +66,13 @@
       <form class="form-order" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form-order__section filter-type">
           <div class="filter-type__wrap">
-            <!--<legend class="filter-type__title">Тип</legend>-->
+            <h2 class="filter-type__title">Тип</h2>
             <ul class="filter-type__list">
               <li class="filter-type__item">
-                <input class="filter-type__radio filter-type__radio--active visually-hidden" type="radio" name="product-type" value="decor" id="filter-decor" checked>
+                <input class="filter-type__radio visually-hidden" type="radio" name="product-type" value="decor" id="filter-decor" checked>
                 <label class="filter-type__label" for="filter-decor">Аксессуар для интерьера</label>
               </li>
-              <li class="filter-type__item">
+              <li class="filter-type__item filter-type__item--last">
                 <input class="filter-type__radio visually-hidden" type="radio" name="product-type" value="toy" id="filter-toy">
                 <label class="filter-type__label" for="filter-toy">Детская игрушка</label>
               </li>
@@ -81,14 +81,14 @@
         </fieldset>
         <fieldset class="form-order__section filter-color">
           <div class="filter-color__wrap">
-            <!--<legend class="filter-color__title">Цвет</legend>-->
+            <h2 class="filter-color__title">Цвет</h2>
             <ul class="filter-color__list">
               <li class="filter-color__item">
-                <input class="filter-color__checkbox filter-color__checkbox--active visually-hidden" type="checkbox" name="white" id="filter-white" checked>
+                <input class="filter-color__checkbox visually-hidden" type="checkbox" name="white" id="filter-white" checked>
                 <label class="filter-color__label" for="filter-white">Белый</label>
               </li>
               <li class="filter-color__item">
-                <input class="filter-color__checkbox filter-color__checkbox--active visually-hidden" type="checkbox" name="grey" id="filter-grey" checked>
+                <input class="filter-color__checkbox visually-hidden" type="checkbox" name="grey" id="filter-grey" checked>
                 <label class="filter-color__label" for="filter-grey">Серый</label>
               </li>
               <li class="filter-color__item">
@@ -103,7 +103,7 @@
                 <input class="filter-color__checkbox visually-hidden" type="checkbox" name="pink" id="filter-pink">
                 <label class="filter-color__label" for="filter-pink">Розовый</label>
               </li>
-              <li class="filter-color__item">
+              <li class="filter-color__item filter-color__item--last">
                 <input class="filter-color__checkbox visually-hidden" type="checkbox" name="orange" id="filter-orange">
                 <label class="filter-color__label" for="filter-orange">Оранжевый</label>
               </li>
@@ -112,38 +112,38 @@
         </fieldset>
         <fieldset class="form-order__section field-name">
           <div class="field-name__wrap">
-            <!--<legend class="field-name__title">ФИО</legend>-->
+            <h2 class="field-name__title">ФИО</h2>
             <ul class="field-name__list">
               <li class="field-name__item">
-                <label class="field-name__label" for="user-name">Имя:</label>
-                <input class="field-name__input field-name__user-name" type="text" name="user-name" placeholder="Введите ваше имя*" id="user-name" required>
+                <label class="field-name__label field-name__label-name" for="user-name">Имя:</label>
+                <input class="field-name__input field-name__input-name" type="text" name="user-name" placeholder="Введите ваше имя*" id="user-name" required>
               </li>
               <li class="field-name__item">
                 <label class="field-name__label" for="user-lastname">Фамилия:</label>
-                <input class="field-name__input field-name__user-lastname" type="text" name="user-lastname" placeholder="Укажите фамилию*" id="user-lastname" required>
+                <input class="field-name__input" type="text" name="user-lastname" placeholder="Укажите фамилию*" id="user-lastname" required>
               </li>
-              <li class="field-name__item">
+              <li class="field-name__item field-name__item--last">
                 <label class="field-name__label" for="user-middlename">Отчество:</label>
-                <input class="field-name__input field-name__user-middlename" type="text" name="user-middlename" placeholder="Отчество, если желаете" id="user-middlename">
+                <input class="field-name__input" type="text" name="user-middlename" placeholder="Отчество, если желаете" id="user-middlename">
               </li>
             </ul>
           </div>
         </fieldset>
         <fieldset class="form-order__section field-phone">
           <div class="field-phone__wrap">
-            <!--<legend class="field-phone__title">Тел</legend>-->
+            <h2 class="field-phone__title">Тел</h2>
             <input class="field-phone__input" type="tel" name="user-phone" pattern="7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </div>
         </fieldset>
         <fieldset class="form-order__section field-email">
           <div class="field-email__wrap">
-            <!--<legend class="field-email__title">E-mail</legend>-->
+            <h2 class="field-email__title">E-mail</h2>
             <input class="field-email__input" type="email" name="user-email" placeholder="Ваш Email*" required>
           </div>
         </fieldset>
         <fieldset class="form-order__section field-extra">
           <div class="field-extra__wrap">
-            <!--<legend class="field-extra__title">Доп</legend>-->
+            <h2 class="field-extra__title">Доп</h2>
             <textarea class="field-extra__textarea" name="user-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </fieldset>
@@ -154,7 +154,7 @@
       </form>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--inner page-footer--inner-form">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html" aria-label="Логотип интернет-магазина «Мишка»">
           <svg class="page-footer__logo-image" version="1.1" id="footer-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="102px" height="34px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve">
