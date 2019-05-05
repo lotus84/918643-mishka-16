@@ -109,13 +109,26 @@
 }
 
 .main-nav__search {
+  display: flex;
   box-sizing: border-box;
   width: 260px;
   margin: 0 auto;
-  padding-top: 29px;
-  padding-bottom: 27px;
-  padding-left: 46px;
-  padding-right: 10px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  color: #000000;
+}
+
+.main-nav__search svg {
+  margin-top: 4px;
+  margin-right: 26px;
+}
+
+.main-nav__search path {
+  fill-opacity: 0.2;
+}
+
+.main-nav__search-text {
+  margin: 0;
 }
 
 .main-nav__cart {
@@ -131,7 +144,10 @@
 .main-nav__cart svg {
   margin-top: 4px;
   margin-right: 25px;
-  opacity: 0.2;
+}
+
+.main-nav__cart path {
+  fill-opacity: 0.2;
 }
 
 .main-nav__cart p {
@@ -173,7 +189,7 @@
   .main-nav__logo-image {
     display: block;
     width: 112px;
-    height: 46px;
+    height: auto;
   }
 
   .main-nav__logo:hover .main-nav__logo-image,
@@ -202,7 +218,6 @@
   }
 
   .main-nav__catalog {
-    /*order: 1;*/
     width: 150px;
     margin: 0;
     margin-right: 18px;
@@ -213,7 +228,6 @@
   }
 
   .main-nav__ordering {
-    /*order: 1;*/
     width: 150px;
     margin: 0;
     padding-top: 20px;
@@ -225,16 +239,30 @@
   .main-nav__search {
     width: 82px;
     margin: 0;
-    padding-top: 43px;
-    padding-bottom: 42px;
-    padding-left: 10px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 34px;
+  }
+
+  .main-nav__search-text {
+    display: none;
+  }
+
+  .main-nav__search:hover path,
+  .main-nav__search:focus path {
+    fill: #63d1bb;
+    fill-opacity: 1;
+  }
+
+  .main-nav__search:active path {
+    fill-opacity: 0.3;
   }
 
   .main-nav__cart {
     width: 266px;
     margin: 0;
     padding-top: 31px;
-    padding-bottom: 30px;
+    padding-bottom: 31px;
     padding-left: 30px;
 
     border-left: 1px solid #ececec;
@@ -249,18 +277,14 @@
     margin-left: 0;
   }
 
-  .main-nav__cart:hover svg,
-  .main-nav__cart:focus svg {
-    opacity: 1;
-  }
-
   .main-nav__cart:hover path,
   .main-nav__cart:focus path {
     fill: #63d1bb;
+    fill-opacity: 1;
   }
 
   .main-nav__cart:active path {
-    fill: rgba(99, 209, 187, 0.3);
+    fill-opacity: 0.3;
   }
 
   .main-nav__cart:hover p,
@@ -312,7 +336,7 @@
 
   .main-nav__logo-image {
     width: 149px;
-    height: 73px;
+    height: auto;
   }
 
   .main-nav__wrap--first {
