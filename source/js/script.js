@@ -4,8 +4,6 @@ var itemWeekBuy = document.querySelector(".product-main__checkout");
 var itemPopup = document.querySelector(".modal-item");
 var itemBuy = document.querySelectorAll(".catalog__button-buy");
 
-console.log(itemPopup);
-
 for (var i = 0; i < navMain.length; i++) {
   navMain[i].classList.remove("main-nav__wrap--nojs");
 };
@@ -51,7 +49,8 @@ if (itemWeekBuy) {
 
 var slides = document.getElementsByClassName("slider__item-wrap");
 
-if (slides) {
+
+if (slides.length) {
   var slideIndex = 1;
   showSlides(slideIndex);
 
