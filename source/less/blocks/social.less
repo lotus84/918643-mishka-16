@@ -23,6 +23,11 @@
   padding-top: 6px;
 }
 
+.social__link-icon {
+  fill: #231F20;
+}
+
+
 @media (min-width: @tablet-width) {
   .social__link--instagram {
     padding-top: 13px;
@@ -36,12 +41,12 @@
     padding-top: 13px;
   }
 
-  .social__link:hover path,
-  .social__link:focus path {
+  .social__link:hover .social__link-icon,
+  .social__link:focus .social__link-icon {
     fill: #46c1ae;
   }
 
-  .social__link:active path {
-    fill: rgba(70, 193, 174, 0.3);
+  .social__link:active .social__link-icon {
+    opacity: 0.3;
   }
 }
