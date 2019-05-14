@@ -15,6 +15,10 @@
   color: #000000;
 }
 
+.copyright__logo {
+  fill: #63d1bb;
+}
+
 @media (min-width: @tablet-width) {
   .copyright {
     width: 184px;
@@ -29,17 +33,17 @@
     padding-top: 8px;
   }
 
-  .copyright__link:hover path,
-  .copyright__link:focus path {
+  .copyright__link:hover .copyright__logo,
+  .copyright__link:focus .copyright__logo {
     fill: #46c1ae;
   }
 
-  .copyright__link:active path {
-    fill: rgba(70, 193, 174, 0.3);
+  .copyright__link:active .copyright__logo {
+    opacity: 0.3;
   }
 
   .copyright__link:active .copyright__text {
-    color: rgba(0, 0, 0, 0.3);
+    opacity: 0.3;
   }
 }
 

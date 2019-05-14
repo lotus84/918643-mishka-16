@@ -11,6 +11,10 @@
   display: none;
 }
 
+.page-footer__logo-icon {
+  fill: #000000;
+}
+
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -58,15 +62,15 @@
   .page-footer__logo {
     display: block;
     margin-right: 158px;
-  }
 
-  .page-footer__logo:hover path,
-  .page-footer__logo:focus path {
-    fill: #46c1ae;
-  }
+    &:hover .page-footer__logo-icon,
+    &:focus .page-footer__logo-icon {
+      fill: #46c1ae;
+    }
 
-  .page-footer__logo:active path {
-    fill: rgba(70, 193, 174, 0.3);
+    &:active .page-footer__logo-icon {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__wrapper {
