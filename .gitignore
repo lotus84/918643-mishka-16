@@ -7,7 +7,6 @@
 *.psd
 *.sublime*
 build/
-js/picturefill.js
 node_modules/
 npm-debug.*
 Thumbs.db
