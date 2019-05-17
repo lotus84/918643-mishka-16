@@ -6,6 +6,8 @@ var itemBuy = document.querySelectorAll(".catalog__button-buy");
 
 for (var i = 0; i < navMain.length; i++) {
   navMain[i].classList.remove("main-nav__wrap--nojs");
+  navMain[i].classList.remove("main-nav__wrap--opened");
+  navMain[i].classList.add("main-nav__wrap--closed");
 };
 
 navToggle.addEventListener("click", function() {
