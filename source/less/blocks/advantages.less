@@ -1,4 +1,18 @@
 .advantages {
+  position: relative;
+}
+
+.advantages::before {
+  content: url("../img/bg-zigzag-line.svg");
+
+  position: absolute;
+  top: -40px;
+  left: 0;
+
+  width: 100%;
+}
+
+.advantages__container {
   display: flex;
   flex-direction: column;
 
@@ -122,7 +136,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .advantages {
+  .advantages::before {
+    top: -68px;
+  }
+
+  .advantages__container {
     display: flex;
     flex-direction: column;
     width: 668px;
@@ -179,11 +197,26 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantages {
+  .advantages::before {
+    content: none;
+  }
+
+  .advantages__container {
+    position: relative;
     width: 1050px;
     margin-bottom: 74px;
     padding-bottom: 10px;
     padding-left: 172px;
+  }
+
+  .advantages__container::before {
+    content: url("../img/bg-zigzag-line.svg");
+
+    position: absolute;
+    top: -80px;
+    left: 0;
+
+    width: 100%;
   }
 
   .advantages__title {

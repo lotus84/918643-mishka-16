@@ -1,4 +1,4 @@
-.product-main {
+.product-main__container {
   display: flex;
   flex-direction: column;
   width: 260px;
@@ -66,6 +66,20 @@
 
 @media (min-width: @tablet-width) {
   .product-main {
+    position: relative;
+  }
+
+  .product-main::before {
+    content: url("../img/bg-zigzag-fill.svg");
+
+    position: absolute;
+    top: -58px;
+    left: 0;
+
+    width: 100%;
+  }
+
+  .product-main__container {
     flex-direction: row;
     flex-wrap: wrap;
     width: 668px;
@@ -130,7 +144,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .product-main {
+  .product-main::before {
+    top: -142px;
+  }
+
+  .product-main__container {
     width: 1050px;
     margin-bottom: 154px;
   }

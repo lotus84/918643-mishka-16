@@ -1,5 +1,6 @@
-.catalog {
+.catalog__container {
   width: 260px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -107,6 +108,20 @@
 
 @media (min-width: @tablet-width) {
   .catalog {
+    position: relative;
+  }
+
+  .catalog::before {
+    content: url("../img/bg-zigzag-fill.svg");
+
+    position: absolute;
+    top: -94px;
+    left: 0;
+
+    width: 100%;
+  }
+
+  .catalog__container {
     width: 668px;
     margin-bottom: 50px;
   }
@@ -158,7 +173,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .catalog {
+  .catalog::before {
+    top: -144px;
+  }
+
+  .catalog__container {
     width: 1050px;
     margin-bottom: 60px;
   }
