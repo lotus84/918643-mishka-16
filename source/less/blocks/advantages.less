@@ -1,12 +1,13 @@
 .advantages {
   position: relative;
+  margin-bottom: 44px;
 }
 
 .advantages::before {
   content: url("../img/bg-zigzag-line.svg");
 
   position: absolute;
-  top: -40px;
+  top: -32px;
   left: 0;
 
   width: 100%;
@@ -19,13 +20,15 @@
   box-sizing: border-box;
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 54px;
 }
 
 .advantages__title {
+  box-sizing: border-box;
+  width: 260px;
   margin: 0;
-  margin-bottom: 6px;
-  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 4px;
+  padding-right: 10px;
   font-size: 25px;
   line-height: 30px;
 }
@@ -136,8 +139,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .advantages {
+    margin-bottom: 86px;
+  }
+
   .advantages::before {
-    top: -68px;
+    top: -56px;
   }
 
   .advantages__container {
@@ -146,11 +153,11 @@
     width: 668px;
 
     margin: 0 auto;
-    margin-bottom: 76px;
   }
 
   .advantages__title {
-    margin-bottom: -6px;
+    width: 668px;
+    margin-bottom: -10px;
     margin-left: -4px;
     font-size: 43px;
     line-height: 50px;
@@ -163,7 +170,8 @@
   }
 
   .advantages__item {
-    width: 300px;
+    width: 310px;
+    margin-right: 24px;
     padding-top: 110px;
 
     font-size: 20px;
@@ -216,6 +224,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .advantages {
+    margin-bottom: 82px;
+  }
+
   .advantages::before {
     content: none;
   }
@@ -223,7 +235,6 @@
   .advantages__container {
     position: relative;
     width: 1050px;
-    margin-bottom: 74px;
     padding-bottom: 10px;
     padding-left: 172px;
   }
@@ -232,14 +243,15 @@
     content: url("../img/bg-zigzag-line.svg");
 
     position: absolute;
-    top: -80px;
+    top: -72px;
     left: 0;
 
     width: 100%;
   }
 
   .advantages__title {
-    margin-bottom: -8px;
+    width: 700px;
+    margin-bottom: -10px;
     margin-left: 0;
     font-size: 53px;
     line-height: 57px;
@@ -250,7 +262,7 @@
   }
 
   .advantages__item {
-    width: 300px;
+    margin-right: 35px;
     padding-left: 4px;
   }
 
