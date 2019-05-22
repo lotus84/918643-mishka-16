@@ -1,7 +1,10 @@
+.catalog {
+  margin-bottom: 30px;
+}
+
 .catalog__container {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 30px;
 }
 
 .catalog__list {
@@ -109,13 +112,14 @@
 @media (min-width: @tablet-width) {
   .catalog {
     position: relative;
+    margin-bottom: 48px;
   }
 
   .catalog::before {
     content: url("../img/bg-zigzag-fill.svg");
 
     position: absolute;
-    top: -94px;
+    top: -98px;
     left: 0;
 
     width: 100%;
@@ -123,7 +127,6 @@
 
   .catalog__container {
     width: 668px;
-    margin-bottom: 50px;
   }
 
   .catalog__item {
@@ -173,13 +176,16 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog {
+    margin-bottom: 60px;
+  }
+
   .catalog::before {
-    top: -144px;
+    top: -148px;
   }
 
   .catalog__container {
     width: 1050px;
-    margin-bottom: 60px;
   }
 
   .catalog__list {

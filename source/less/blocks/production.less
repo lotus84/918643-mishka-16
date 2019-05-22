@@ -100,7 +100,7 @@
   }
 
   .production__title-wrap {
-    padding-top: 40px;
+    padding-top: 42px;
     padding-bottom: 32px;
     padding-left: 42px;
     padding-right: 42px;
@@ -111,6 +111,7 @@
   }
 
   .production__title {
+    box-sizing: border-box;
     margin: 0;
     padding-left: 64px;
 
@@ -127,7 +128,7 @@
   }
 
   .production__play-button {
-    top: 190px;
+    top: 194px;
     left: 283px;
   }
 
@@ -150,8 +151,13 @@
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
+  .production__video-wrap {
+    width: 668px;
+  }
+
   .production__video {
-    height: 455px; /*временно*/
+    width: 668px;
+    height: 455px;
   }
 
   .production__intro-wrap {
@@ -178,11 +184,10 @@
 
 @media (min-width: @desktop-width) {
   .production {
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     width: 1050px;
-    height: 455px; /*временно*/
     border: none;
-    border-right: 1px solid #ececec;
   }
 
   .production__title-wrap {
@@ -190,17 +195,18 @@
     width: 368px;
     padding-top: 42px;
     padding-bottom: 32px;
-    padding-left: 80px;
+    padding-left: 78px;
     padding-right: 56px;
 
     border-top: 1px solid #ececec;
-    border-left: none;
-    border-right: none;
   }
 
   .production__title {
-    padding-top: 54px;
+    margin-bottom: 266px;
+    padding-top: 52px;
+    padding-bottom: 10px;
     padding-left: 0;
+    padding-right: 10px;
   }
 
   .production__title::before {
@@ -208,26 +214,35 @@
     left: 0;
   }
 
+  .production__video-wrap {
+    order: 1;
+    width: 681px;
+  }
+
   .production__video {
     width: 682px;
   }
 
   .production__play-button {
+    top: 188px;
     left: 291px;
   }
 
   .production__intro-wrap {
+    order: 1;
     box-sizing: border-box;
     width: 368px;
+    margin-top: -278px;
     padding-left: 77px;
     padding-right: 56px;
 
-    border-right: 1px solid #ececec;
+    border-left: 1px solid #ececec;;
+    border-right: 1px solid #ececec;;
     border-bottom: 1px solid #ececec;
   }
 
   .production__intro {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 
   .production__button {
