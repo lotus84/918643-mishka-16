@@ -157,10 +157,9 @@
   }
 
   .advantages__list {
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     width: 668px;
-    height: 470px; /*временно*/
   }
 
   .advantages__item {
@@ -169,6 +168,26 @@
 
     font-size: 20px;
     line-height: 22px;
+  }
+
+  .advantages__item--price {
+    order: 3;
+  }
+
+  .advantages__item--photo {
+    order: 5;
+  }
+
+  .advantages__item--love {
+    order: 2;
+  }
+
+  .advantages__item--national {
+    order: 4;
+  }
+
+  .advantages__item--gift {
+    order: 6;
   }
 
   .advantages__item--eco::before {
@@ -228,7 +247,6 @@
 
   .advantages__list {
     width: 700px;
-    height: 470px; /*временно*/
   }
 
   .advantages__item {
