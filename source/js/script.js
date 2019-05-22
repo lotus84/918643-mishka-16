@@ -1,6 +1,6 @@
 var navMain = document.querySelectorAll(".main-nav__wrap");
 var navToggle = document.querySelector(".main-nav__toggle");
-var itemWeekBuy = document.querySelector(".product-main__checkout");
+var itemWeekBuy = document.querySelector(".product-main__button");
 var itemPopup = document.querySelector(".modal-item");
 var itemBuy = document.querySelectorAll(".catalog__button-buy");
 
