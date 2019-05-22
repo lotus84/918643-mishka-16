@@ -12,7 +12,7 @@
   content: url("../img/bg-zigzag-line.svg");
 
   position: absolute;
-  top: -48px;
+  top: -38px;
   left: 0;
 
   width: 100%;
@@ -21,15 +21,20 @@
 .company-contacts__wrapper {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
   width: 260px;
   margin: 0 auto;
 }
 
 .company-contacts__title {
+  box-sizing: border-box;
+  width: 260px;
   margin: 0;
-  margin-bottom: 26px;
-  padding: 0;
+  margin-bottom: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
   font-size: 18px;
   line-height: 30px;
 }
@@ -86,13 +91,17 @@
   height: 457px;
 }
 
-.company-contacts__write-message {
+.company-contacts__button-wrap {
   margin: 0 auto;
+}
+
+.company-contacts__button {
+  width: 260px;
 }
 
 @media (min-width: @tablet-width) {
   .company-contacts--zigzag::before {
-    top: -83px;
+    top: -52px;
   }
 
   .company-contacts__wrapper {
@@ -101,8 +110,12 @@
 
   .company-contacts__title {
     position: relative;
-    margin-bottom: 46px;
-    margin-left: -4px;
+    box-sizing: border-box;
+    width: 668px;
+    margin-bottom: 22px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-right: 70px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -111,7 +124,7 @@
     content: "";
 
     position: absolute;
-    top: -16px;
+    top: 11px;
     right: 3px;
 
     width: 47px;
@@ -143,18 +156,17 @@
     height: 457px;
   }
 
-  .company-contacts__write-message {
+  .company-contacts__button {
     width: 230px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .company-contacts {
+    flex-direction: row;
     flex-wrap: wrap;
     width: 1050px;
-    height: 457px; /*временно*/
     margin: 0 auto;
-    padding-left: 174px;
   }
 
   .company-contacts--zigzag::before {
@@ -162,29 +174,32 @@
   }
 
   .company-contacts__wrapper {
-    order: -2;
-    width: 340px;
+    width: 50%;
     margin: 0;
+    padding-left: 170px;
   }
 
   .company-contacts__title {
-    margin-top: 70px;
-    margin-bottom: 48px;
+    width: 350px;
+    margin-top: 44px;
+    margin-bottom: 22px;
+    padding-right: 10px;
     font-size: 53px;
     line-height: 57px;
   }
 
   .company-contacts__title::after {
-    top: -8px;
-    right: 404px;
+    top: 18px;
+    right: 410px;
   }
 
   .company-contacts__table {
-    margin-bottom: 50px;
+    margin-bottom: 82px;
+    margin-left: 4px;
   }
 
   .company-contacts__map-wrap {
-    width: auto;
+    width: 50%;
     margin: 0;
     margin-left: auto;
   }
@@ -203,8 +218,9 @@
     height: 457px;
   }
 
-  .company-contacts__write-message {
-    order: -1;
+  .company-contacts__button-wrap {
     margin: 0;
+    margin-top: -52px;
+    padding-left: 175px;
   }
 }
